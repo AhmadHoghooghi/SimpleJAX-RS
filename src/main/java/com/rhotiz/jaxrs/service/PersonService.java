@@ -106,7 +106,7 @@ public class PersonService {
 			}
 			
 			try{
-				person = Person.from(personString);
+				person = Person.valueOf(personString);
 			}catch (Exception e) {
 				throw new WebApplicationException(e, Response.Status.BAD_REQUEST);
 			}

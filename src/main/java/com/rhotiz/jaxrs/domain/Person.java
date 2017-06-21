@@ -32,7 +32,7 @@ public class Person {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	public static Person from(String firstLastName) throws RuntimeException{
+	public static Person valueOf(String firstLastName) throws RuntimeException{
 		String[] nameArray=firstLastName.split(",");
 		Person result= null;
 		if (!((nameArray.length == 2) || (nameArray.length ==3))) {

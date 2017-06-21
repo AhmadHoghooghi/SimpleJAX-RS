@@ -9,7 +9,7 @@ public class PersonTest {
 	@Test
 	public void testFromForTwoPartString() {
 		String personIdentifier = "ahmad, hoghooghi";
-		Person ahmadHoghooghi = Person.from(personIdentifier);
+		Person ahmadHoghooghi = Person.valueOf(personIdentifier);
 		assertEquals("ahmad", ahmadHoghooghi.getFirstName());
 		assertEquals("hoghooghi", ahmadHoghooghi.getLastName());
 	}
@@ -17,7 +17,7 @@ public class PersonTest {
 	@Test
 	public void testFromForTreePartString() {
 		String personIdentifier = "1, ahmad, hoghooghi";
-		Person ahmadHoghooghi = Person.from(personIdentifier);
+		Person ahmadHoghooghi = Person.valueOf(personIdentifier);
 		assertEquals(1,ahmadHoghooghi.getId());
 		assertEquals("ahmad", ahmadHoghooghi.getFirstName());
 		assertEquals("hoghooghi", ahmadHoghooghi.getLastName());
